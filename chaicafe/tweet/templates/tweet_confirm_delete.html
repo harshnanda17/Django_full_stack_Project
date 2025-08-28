@@ -5,6 +5,11 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class='text-center mt-4'>Welcome to Chai Cafe - Tweets</h1>
+    <h1 class='text-center mt-4'>Are you sure that you want to delete the Tweet?</h1>
 
+   <form method="post">
+       {% csrf_token %}
+       <button class="btn btn-danger" type="submit">Delete</button>
+   </form>
+   <a href="{% url 'tweet_list' %}" class="btn btn-success">Cancel</a>
 {% endblock %}

@@ -11,7 +11,7 @@
 
     <title>
         {% block title %}
-            Chai Cafe - Home
+            Home page
         {% endblock %}
     </title>
     </head>
@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="https://icons.getbootstrap.com/icons/cup-hot.svg" alt="Chai Cafe" style="height: 30px;" class="d-inline-block align-text-top">
+      <img src="https://icons.getbootstrap.com/icons/cup-hot.svg" alt="Logo" style="height: 30px;" class="d-inline-block align-text-top">
       Tweetbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -51,13 +51,15 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+      <a class="btn btn-primary mx-2" href="{% url 'tweet_list' %}">Tweet Home</a>
+
     </div>
   </div>
 </nav>
    <div class="container">
     {% block content %}
-        <h1>Welcome to Chai Cafe</h1>
-        <p>Enjoy our selection of teas and snacks.</p>
+        <h1>Welcome to Tweetbar</h1>
+        <p>Here we can tweet about our careers and lives.</p>
     {% endblock %}
 </body>
 </html>
